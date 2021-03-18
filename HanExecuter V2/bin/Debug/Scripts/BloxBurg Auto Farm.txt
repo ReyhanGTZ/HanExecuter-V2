@@ -1,0 +1,2 @@
+getgenv().load_alpha_lt2=true
+loadstring(game:HttpGet("https://alpha1004.tech/scripts/AlphaX.lua"))()

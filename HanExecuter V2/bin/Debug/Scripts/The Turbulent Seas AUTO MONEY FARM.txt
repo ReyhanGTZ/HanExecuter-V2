@@ -1,0 +1,31 @@
+--Variables
+local extradelay = (0.1)
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+local hum = plr.Character.HumanoidRootPart
+
+--Functions
+local function buybarrel()
+game:GetService("ReplicatedStorage").Remotes.PlayerEvents.GetTaskBarrel:FireServer()
+end
+
+local function sellbarrel()
+game:GetService("ReplicatedStorage").Remotes.PlayerEvents.SellBarrel:FireServer()
+end
+
+--Script
+while true do
+hum.CFrame = CFrame.new(10460.3652, 91.9178314, -23070.3984)
+wait(0.1+extradelay)
+local A_1 = "DriedBerries"
+game:GetService("ReplicatedStorage").Remotes.PlayerEvents.GetTask:FireServer(game:GetService("ReplicatedStorage").Tasks.CTC.StandardPurchase, A_1)
+wait(0.1+extradelay)
+hum.CFrame = CFrame.new(10405.0146, 92.1075592, -23015.7285)
+wait(0.1+extradelay)
+buybarrel()
+wait(0.1+extradelay)
+hum.CFrame = CFrame.new(-30039.9648, 103.147812, 34772.8828)
+wait(0.3+extradelay)
+sellbarrel()
+wait(0.3+extradelay)
+end

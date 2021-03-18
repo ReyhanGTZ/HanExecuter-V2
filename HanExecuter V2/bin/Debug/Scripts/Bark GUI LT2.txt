@@ -1,0 +1,2 @@
+getgenv().bark_key='bark executor soon'
+loadstring(game:HttpGetAsync'https://cdn.applebee1558.com/bark/bark.lua')()
